@@ -3,6 +3,7 @@ import { Card, Form, Button, Alert } from "react-bootstrap";
 import { useAuth } from "../../context/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
 import CenteredContainer from "./CenteredContainer";
+import NavbarComponent from "../google-drive/NavbarComponent";
 
 export default function UpdateProfile() {
   const emailRef = useRef();
@@ -46,6 +47,8 @@ export default function UpdateProfile() {
     }
   }
   return (
+    <>
+    <NavbarComponent/>
     <CenteredContainer>
       <Card>
         <Card.Body>
@@ -86,5 +89,6 @@ export default function UpdateProfile() {
         <Link to="/user">Cancel</Link>
       </div>
     </CenteredContainer>
+    </>
   );
 }

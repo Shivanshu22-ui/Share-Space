@@ -3,6 +3,7 @@ import { Alert, Button, Card } from 'react-bootstrap'
 import { Link, Navigate, useNavigate } from 'react-router-dom'
 import { useAuth } from '../../context/AuthContext';
 import CenteredContainer from "./CenteredContainer";
+import NavbarComponent from '../google-drive/NavbarComponent';
 
 export default function DashBoard() {
     const [error,setError] = useState('');
@@ -24,6 +25,8 @@ export default function DashBoard() {
         })
     }
   return (
+    <>
+    <NavbarComponent/>
     <CenteredContainer>
         <Card>
             <Card.Body>
@@ -37,5 +40,6 @@ export default function DashBoard() {
         <Button variant='link' onClick={handleLogout}>Log out</Button>
       </div>
     </CenteredContainer>
+    </>
   )
 }
